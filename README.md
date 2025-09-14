@@ -73,11 +73,10 @@ The model is built with **Keras (TensorFlow backend)**:
 
 - **Training & Validation Accuracy/Loss**
 
-![Accuracy & Loss](results\graphics\training_history.png)
+![Accuracy & Loss](./results/graphics/training_history.png)
 
 - **Confusion Matrix**
-
-![Confusion Matrix](results\graphics\confusion_matrix.png)
+![Confusion Matrix](./results/graphics/confusion_matrix.png)
 - **Saved Models**: `.h5` (Keras) and `.pkl` (Tokenizer & preprocessing pipeline)  
 
 ⚠️ Note: Heavy artifacts (`models/`.etc) are ignored in Git for repository cleanliness.  
