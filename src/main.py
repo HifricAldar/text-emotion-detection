@@ -3,7 +3,7 @@ import sys
 
 # Import semua fungsi dari modul yang diperlukan
 from data_loader import load_data, remove_duplicates
-from data_preprocessing import add_emotion_labels, balance_dataset, split_data, preprocess_text_data
+from data_preprocessing import add_emotion_labels, balance_dataset, save_split_datasets, split_data, preprocess_text_data
 from model_builder import build_sequential_model, compile_model
 from model_training import train_model, plot_training_history
 from model_evaluate import evaluate_model, plot_confusion_matrix
@@ -23,7 +23,9 @@ def main():
     data = add_emotion_labels(data)
     balanced_data = balance_dataset(data, SAMPLES_PER_CLASS)
     train_data, val_data, test_data = split_data(balanced_data, TEST_SIZE, VAL_SIZE)
-    
+    # save  
+    save_split_datasets(train_data, val_data, test_data)
+
     # 3. Preprocess text data
     print("Preprocessing text data...")
     tokenizer, training_padded, validation_padded, train_labels, val_labels, num_classes = preprocess_text_data(

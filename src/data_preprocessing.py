@@ -42,6 +42,7 @@ def split_data(data, test_size=0.2, val_size=0.5):
     test_data = pd.DataFrame({'text': data_test_text, 'label': data_test_label})
     
     return train_data, val_data, test_data
+
 def save_split_datasets(train_data, val_data, test_data):
     train_data.to_csv(TRAIN_PROCESSED_PATH, index=False)
     val_data.to_csv(VAL_PROCESSED_PATH, index=False)

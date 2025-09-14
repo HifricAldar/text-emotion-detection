@@ -21,7 +21,6 @@ ENV/
 Thumbs.db
 
 # Models & artifacts
-models/*
 results/*
 !results/graphics/
 !results/graphics/*.png
